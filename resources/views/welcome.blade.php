@@ -79,12 +79,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Laravel 5.6 auth with Entrust
                 </div>
 
                 <div class="links">
-                    <a href="/testentrust1">Test entrust 1</a>
-                    <a href="/testentrust2">Test entrust 2</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>

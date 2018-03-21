@@ -15,12 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/testentrust1', function () {
-    return json_encode('Test entrust 1',true);
+Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
+    Route::resource('roles','RoleController');
+    Route::resource('users','UserController');
 });
 
-Route::get('/testentrust2', function () {
-    return json_encode('Test entrust 2',true);
-});
+Auth::routes();
 
-
+Route::get('/home', 'HomeController@index')->name('home');
