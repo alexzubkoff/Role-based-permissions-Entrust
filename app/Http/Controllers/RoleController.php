@@ -87,13 +87,7 @@ class RoleController extends Controller
     {
         $role = Role::find($id);//Find the requested role
         $permissions = Permission::get(); //get all permissions
-        //Get the permissions ids linked to the role
-        $rolePermissions =
-//            DB::table("permission_role")
-//                ->where("permission_role.role_id",$id)
-//                ->pluck('permission_role.permission_id','permission_role.permission_id')
-//                ->toArray();
-            DB::table("permission_role")
+        $rolePermissions = DB::table("permission_role")
                 ->where("role_id", $id)
                 ->pluck('permission_id')
                 ->toArray();

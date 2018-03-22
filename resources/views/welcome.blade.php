@@ -82,11 +82,22 @@
                     Laravel 5.6 auth with Entrust
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                @if (Auth::guest())
+                    <div class="links">
+                    <a href="https://laravel-news.com">News for all users</a>
+                    </div>
+                @else
+                    @role('admin')
+                    <div class="links">
+                    <a href="https://forge.laravel.com">Forge for role admin</a>
+                    </div>
+                    @endrole
+                    @role('user-list')
+                    <div class="links">
+                    <a href="https://github.com/laravel/laravel">GitHub for role user-list</a>
+                    </div>
+                    @endrole
+                @endif
             </div>
         </div>
     </body>

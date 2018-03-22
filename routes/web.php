@@ -23,3 +23,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::auth();
+
+Route::get('https://laravel-news.com',function (){
+    return json_encode('fuck',true);
+});

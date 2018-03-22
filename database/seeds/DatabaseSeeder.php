@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
             $role->attachPermission($value);
         }
         //3) Create Admin User
-        $user = ['name' => 'Admin User', 'email' => 'adminuser@test.com', 'password' => Hash::make('adminpwd')];
+        $user = ['name' => 'Admin User', 'email' => 'adminuser@test.com', 'password' => Hash::make('adminpwd'), /*'password' => 'adminpwd'*/];
         $user = User::create($user);
         //4) Set User Role
         $user->attachRole($role);
