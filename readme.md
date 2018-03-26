@@ -1,3 +1,22 @@
+1. Clone project from repository.
+
+2. In the root of the project in the terminal
+   run:  composer install 
+   
+3. Create MySql database and in the .env and config/
+   database.php add configuration of your database.
+   
+4. In the root of the project run command : 
+   php artisan migrate 
+   (run migration  passport migration tables use for store client and tokens)
+   
+5. Next to you should install passport, because generate encryption keys needs 
+   to usse in create passport token.
+   run command:  
+   php artisan passport:install
+
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
