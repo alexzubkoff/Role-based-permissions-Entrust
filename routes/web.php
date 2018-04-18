@@ -29,3 +29,7 @@ Route::auth();
 Route::get('https://laravel-news.com',function (){
     return json_encode('fuck',true);
 });
+
+Route::get('/', 'ChatsController@index');
+Route::get('messages', 'ChatsController@fetchMessages');
+Route::post('messages', 'ChatsController@sendMessage');
